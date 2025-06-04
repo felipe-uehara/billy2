@@ -1,0 +1,20 @@
+Added Component: Designator=U5(CONV_BOB-12009)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/BOB-12009/SparkFun/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "SparkFun"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "BOB-12009"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/BOB-12009/SparkFun/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=U5-GND_1
+Added Pin To Net: NetName=GND Pin=U5-GND_2
+Added Pin To Net: NetName=D1_B Pin=U5-HV1
+Added Pin To Net: NetName=D1_F Pin=U5-HV2
+Added Pin To Net: NetName=D2_F Pin=U5-HV3
+Added Pin To Net: NetName=D2_B Pin=U5-HV4
+Added Pin To Net: NetName=+5V Pin=U5-HV
+Added Pin To Net: NetName=D1_Forward Pin=U5-LV1
+Added Pin To Net: NetName=D1_Backward Pin=U5-LV2
+Added Pin To Net: NetName=D2_Forward Pin=U5-LV3
+Added Pin To Net: NetName=D2_Backward Pin=U5-LV4
+Added Pin To Net: NetName=+3.3V Pin=U5-LV
+Added Member To Class: ClassName=Esquemático Member=Component U5 Logic Level Shifter

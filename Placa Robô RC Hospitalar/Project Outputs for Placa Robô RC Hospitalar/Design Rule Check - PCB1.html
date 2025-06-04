@@ -1,0 +1,691 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 9em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD23\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">19/05/2025</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">20:13:28</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:00</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc" class="file"><acronym title="C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc">C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">117</td></tr>
+</table>
+</td>
+</table><a name="IDX3EHQDB532FZMLVGHYBLMGYQCLLWHONQNEGQR4M5KOEULQ3O2NOM"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDDMQLT0GGMIWVJK3ZHWUXM4GCUJ5AF3OMEU114MMNZMCOKEUNSTOI">Clearance Constraint (Gap=0.35mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDBF3TJESSU4YYILAMEHJP2KCTQDJVFT43OH3A54ICORQVOTXQCCCC">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDTSPQC2DONYNKB4V1TB144EPHKD2E5IZISPYWPCNW5YV2M4KKZCFK">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">16</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDA13M4F0SBAEZFCWU1MST3QEGBJ3M4PTKPS3DPAG4JLOPEVVU4B1P">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID5W2B34KM4R50GREIIUCFYGRSILQW33EUCPEH04MMHTUSGCLAMHQC">Width Constraint (Min=0.5mm) (Max=2mm) (Preferred=1mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDFGZI0HV5TXLWB4IR5DEA0UJAFGBYWXS35GENDHPWAY45ZQVQSXSF">Routing Topology Rule(Topology=Shortest) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDHN0TI0GZOR1NCPSNFOFMIPARTGHWNXARF31FMPENIQC53SIMWDY">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID15N1UKK0DANKMGWCK4BDEBQPKLS1HAJJLUKRLGEODSWCR1QQ40IJ">Hole Size Constraint (Min=0.6mm) (Max=1mm) (All)</a></td>
+<td class="column2">95</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDNNFMKMDH4V1LPOO3V4NKX5ZH0HJZPT0WS0KD5XEIY5OXLGCIPF4H">Hole To Hole Clearance (Gap=0.1mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDD2Q1Q03VGA1UNPNX2AM4AHHJUKXV3GIE45LXJKJBKEUIUKTEUBYG">Minimum Solder Mask Sliver (Gap=0.05mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID2DQLVHHAJARICM414413SPWDLMN11PBPLD51LZP3GAFI4AMUKML">Silk To Solder Mask (Clearance=0mm) (IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDPNXQ0TTNWDOVBSLTXSUSICTAE4EZJBGRBV0L1FUNUMBXFNYWKMO">Silk to Silk (Clearance=0mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDVVSOGS3CM3ZYN5HWKGYGAF305GZAUGGD1QWU2DC0X1AKCIDM5RHF">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">6</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDDQGXCUDI4VQDOV03X0PJNS52WOUOBSX4YEOOY3EOGEW3LV4KPQWP">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">117</td>
+</tr>
+</table><br><a name="IDTSPQC2DONYNKB4V1TB144EPHKD2E5IZISPYWPCNW5YV2M4KKZCFK"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8976mil|Location2.X=9083.37mil|Location1.Y=4031.63mil|Location2.Y=4409mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8976mil|Location2.X=9083.37mil|Location1.Y=4031.63mil|Location2.Y=4409mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C4-2(203.708mm,85.471mm) on Multi-Layer And Via (204.47mm,77.851mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4506.472mil|Location2.X=9367.075mil|Location1.Y=4030.602mil|Location2.Y=4183.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4506.472mil|Location2.X=9367.075mil|Location1.Y=4030.602mil|Location2.Y=4183.528mil|Absolute=True">Un-Routed Net Constraint: Net RGB Between Pad P10-3(90.17mm,79.756mm) on Multi-Layer And Via (211.676mm,77.825mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6281mil|Location2.X=9083.37mil|Location1.Y=3886mil|Location2.Y=4118.37mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6281mil|Location2.X=9083.37mil|Location1.Y=3886mil|Location2.Y=4118.37mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad U5-GND_1(135.255mm,73.914mm) on Multi-Layer And Via (204.47mm,77.851mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6115mil|Location2.X=9135mil|Location1.Y=3820mil|Location2.Y=4024.022mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6115mil|Location2.X=9135mil|Location1.Y=3820mil|Location2.Y=4024.022mil|Absolute=True">Un-Routed Net Constraint: Net +5V Between Pad U5-HV(132.715mm,73.914mm) on Multi-Layer And Track (204.343mm,73.914mm)(204.343mm,74.016mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7005.685mil|Location2.X=7131.795mil|Location1.Y=2763.205mil|Location2.Y=2889.315mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7005.685mil|Location2.X=7131.795mil|Location1.Y=2763.205mil|Location2.Y=2889.315mil|Absolute=True">Un-Routed Net Constraint: Via (154.4mm,46.133mm) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7005.685mil|Location2.X=7131.795mil|Location1.Y=1150.685mil|Location2.Y=1276.795mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7005.685mil|Location2.X=7131.795mil|Location1.Y=1150.685mil|Location2.Y=1276.795mil|Absolute=True">Un-Routed Net Constraint: Via (154.4mm,5.175mm) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7005.685mil|Location2.X=7131.795mil|Location1.Y=3095.055mil|Location2.Y=3221.165mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7005.685mil|Location2.X=7131.795mil|Location1.Y=3095.055mil|Location2.Y=3221.165mil|Absolute=True">Un-Routed Net Constraint: Via (154.4mm,54.562mm) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7005.685mil|Location2.X=7131.795mil|Location1.Y=4707.575mil|Location2.Y=4833.685mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7005.685mil|Location2.X=7131.795mil|Location1.Y=4707.575mil|Location2.Y=4833.685mil|Absolute=True">Un-Routed Net Constraint: Via (154.4mm,95.52mm) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8618.205mil|Location2.X=8744.315mil|Location1.Y=2763.205mil|Location2.Y=2889.315mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8618.205mil|Location2.X=8744.315mil|Location1.Y=2763.205mil|Location2.Y=2889.315mil|Absolute=True">Un-Routed Net Constraint: Via (195.358mm,46.133mm) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8618.205mil|Location2.X=8744.315mil|Location1.Y=1150.685mil|Location2.Y=1276.795mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8618.205mil|Location2.X=8744.315mil|Location1.Y=1150.685mil|Location2.Y=1276.795mil|Absolute=True">Un-Routed Net Constraint: Via (195.358mm,5.175mm) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8618.205mil|Location2.X=8744.315mil|Location1.Y=3095.055mil|Location2.Y=3221.165mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8618.205mil|Location2.X=8744.315mil|Location1.Y=3095.055mil|Location2.Y=3221.165mil|Absolute=True">Un-Routed Net Constraint: Via (195.358mm,54.562mm) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8618.205mil|Location2.X=8744.315mil|Location1.Y=4707.575mil|Location2.Y=4833.685mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8618.205mil|Location2.X=8744.315mil|Location1.Y=4707.575mil|Location2.Y=4833.685mil|Absolute=True">Un-Routed Net Constraint: Via (195.358mm,95.52mm) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9116.63mil|Location2.X=9228.37mil|Location1.Y=4031.63mil|Location2.Y=4773.37mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9116.63mil|Location2.X=9228.37mil|Location1.Y=4031.63mil|Location2.Y=4773.37mil|Absolute=True">Un-Routed Net Constraint: Net +5V Between Via (207.518mm,94.488mm) from Top Layer to Bottom Layer And Via (208.153mm,77.851mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1763.205mil|Location2.X=1889.315mil|Location1.Y=3545.095mil|Location2.Y=3671.205mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1763.205mil|Location2.X=1889.315mil|Location1.Y=3545.095mil|Location2.Y=3671.205mil|Absolute=True">Un-Routed Net Constraint: Via (21.241mm,65.993mm) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9255.335mil|Location2.X=9367.075mil|Location1.Y=4030.602mil|Location2.Y=4772.342mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9255.335mil|Location2.X=9367.075mil|Location1.Y=4030.602mil|Location2.Y=4772.342mil|Absolute=True">Un-Routed Net Constraint: Net RGB Between Via (211.041mm,94.462mm) from Top Layer to Bottom Layer And Via (211.676mm,77.825mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1115.945mil|Location2.X=1242.055mil|Location1.Y=2168.795mil|Location2.Y=2294.905mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1115.945mil|Location2.X=1242.055mil|Location1.Y=2168.795mil|Location2.Y=2294.905mil|Absolute=True">Un-Routed Net Constraint: Via (4.801mm,31.035mm) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID15N1UKK0DANKMGWCK4BDEBQPKLS1HAJJLUKRLGEODSWCR1QQ40IJ"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Hole Size Constraint (Min=0.6mm) (Max=1mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5658.312mil|Location2.X=5700.507mil|Location1.Y=3004.375mil|Location2.Y=3046.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5658.312mil|Location2.X=5700.507mil|Location1.Y=3004.375mil|Location2.Y=3046.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U2-J2-10(119.111mm,51.193mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5658.312mil|Location2.X=5700.507mil|Location1.Y=3104.375mil|Location2.Y=3146.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5658.312mil|Location2.X=5700.507mil|Location1.Y=3104.375mil|Location2.Y=3146.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U2-J2-11(119.111mm,53.733mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5658.312mil|Location2.X=5700.507mil|Location1.Y=3204.375mil|Location2.Y=3246.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5658.312mil|Location2.X=5700.507mil|Location1.Y=3204.375mil|Location2.Y=3246.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U2-J2-12(119.111mm,56.273mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5658.312mil|Location2.X=5700.507mil|Location1.Y=3304.375mil|Location2.Y=3346.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5658.312mil|Location2.X=5700.507mil|Location1.Y=3304.375mil|Location2.Y=3346.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U2-J2-13(119.111mm,58.813mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5658.312mil|Location2.X=5700.507mil|Location1.Y=3404.375mil|Location2.Y=3446.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5658.312mil|Location2.X=5700.507mil|Location1.Y=3404.375mil|Location2.Y=3446.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U2-J2-14(119.111mm,61.353mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5658.312mil|Location2.X=5700.507mil|Location1.Y=3504.375mil|Location2.Y=3546.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5658.312mil|Location2.X=5700.507mil|Location1.Y=3504.375mil|Location2.Y=3546.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U2-J2-15(119.111mm,63.893mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5658.312mil|Location2.X=5700.507mil|Location1.Y=3604.375mil|Location2.Y=3646.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5658.312mil|Location2.X=5700.507mil|Location1.Y=3604.375mil|Location2.Y=3646.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U2-J2-16(119.111mm,66.433mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5658.312mil|Location2.X=5700.507mil|Location1.Y=3704.375mil|Location2.Y=3746.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5658.312mil|Location2.X=5700.507mil|Location1.Y=3704.375mil|Location2.Y=3746.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U2-J2-17(119.111mm,68.973mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5658.312mil|Location2.X=5700.507mil|Location1.Y=3804.375mil|Location2.Y=3846.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5658.312mil|Location2.X=5700.507mil|Location1.Y=3804.375mil|Location2.Y=3846.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U2-J2-18(119.111mm,71.513mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5658.312mil|Location2.X=5700.507mil|Location1.Y=3904.375mil|Location2.Y=3946.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5658.312mil|Location2.X=5700.507mil|Location1.Y=3904.375mil|Location2.Y=3946.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U2-J2-19(119.111mm,74.053mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5658.312mil|Location2.X=5700.507mil|Location1.Y=2504.375mil|Location2.Y=2546.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5658.312mil|Location2.X=5700.507mil|Location1.Y=2504.375mil|Location2.Y=2546.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U2-J2-5(119.111mm,38.493mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5658.312mil|Location2.X=5700.507mil|Location1.Y=2604.375mil|Location2.Y=2646.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5658.312mil|Location2.X=5700.507mil|Location1.Y=2604.375mil|Location2.Y=2646.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U2-J2-6(119.111mm,41.033mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5658.312mil|Location2.X=5700.507mil|Location1.Y=2704.375mil|Location2.Y=2746.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5658.312mil|Location2.X=5700.507mil|Location1.Y=2704.375mil|Location2.Y=2746.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U2-J2-7(119.111mm,43.573mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5658.312mil|Location2.X=5700.507mil|Location1.Y=2804.375mil|Location2.Y=2846.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5658.312mil|Location2.X=5700.507mil|Location1.Y=2804.375mil|Location2.Y=2846.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U2-J2-8(119.111mm,46.113mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5658.312mil|Location2.X=5700.507mil|Location1.Y=2904.375mil|Location2.Y=2946.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5658.312mil|Location2.X=5700.507mil|Location1.Y=2904.375mil|Location2.Y=2946.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U2-J2-9(119.111mm,48.653mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4658.312mil|Location2.X=4700.507mil|Location1.Y=3004.375mil|Location2.Y=3046.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4658.312mil|Location2.X=4700.507mil|Location1.Y=3004.375mil|Location2.Y=3046.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U2-J3-10(93.711mm,51.193mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4658.312mil|Location2.X=4700.507mil|Location1.Y=3104.375mil|Location2.Y=3146.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4658.312mil|Location2.X=4700.507mil|Location1.Y=3104.375mil|Location2.Y=3146.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U2-J3-11(93.711mm,53.733mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4658.312mil|Location2.X=4700.507mil|Location1.Y=3204.375mil|Location2.Y=3246.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4658.312mil|Location2.X=4700.507mil|Location1.Y=3204.375mil|Location2.Y=3246.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U2-J3-12(93.711mm,56.273mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4658.312mil|Location2.X=4700.507mil|Location1.Y=3304.375mil|Location2.Y=3346.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4658.312mil|Location2.X=4700.507mil|Location1.Y=3304.375mil|Location2.Y=3346.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U2-J3-13(93.711mm,58.813mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4658.312mil|Location2.X=4700.507mil|Location1.Y=3404.375mil|Location2.Y=3446.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4658.312mil|Location2.X=4700.507mil|Location1.Y=3404.375mil|Location2.Y=3446.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U2-J3-14(93.711mm,61.353mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4658.312mil|Location2.X=4700.507mil|Location1.Y=3504.375mil|Location2.Y=3546.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4658.312mil|Location2.X=4700.507mil|Location1.Y=3504.375mil|Location2.Y=3546.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U2-J3-15(93.711mm,63.893mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4658.312mil|Location2.X=4700.507mil|Location1.Y=3604.375mil|Location2.Y=3646.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4658.312mil|Location2.X=4700.507mil|Location1.Y=3604.375mil|Location2.Y=3646.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U2-J3-16(93.711mm,66.433mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4658.312mil|Location2.X=4700.507mil|Location1.Y=3704.375mil|Location2.Y=3746.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4658.312mil|Location2.X=4700.507mil|Location1.Y=3704.375mil|Location2.Y=3746.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U2-J3-17(93.711mm,68.973mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4658.312mil|Location2.X=4700.507mil|Location1.Y=3804.375mil|Location2.Y=3846.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4658.312mil|Location2.X=4700.507mil|Location1.Y=3804.375mil|Location2.Y=3846.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U2-J3-18(93.711mm,71.513mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4658.312mil|Location2.X=4700.507mil|Location1.Y=3904.375mil|Location2.Y=3946.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4658.312mil|Location2.X=4700.507mil|Location1.Y=3904.375mil|Location2.Y=3946.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U2-J3-19(93.711mm,74.053mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4658.312mil|Location2.X=4700.507mil|Location1.Y=2504.375mil|Location2.Y=2546.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4658.312mil|Location2.X=4700.507mil|Location1.Y=2504.375mil|Location2.Y=2546.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U2-J3-5(93.711mm,38.493mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4658.312mil|Location2.X=4700.507mil|Location1.Y=2604.375mil|Location2.Y=2646.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4658.312mil|Location2.X=4700.507mil|Location1.Y=2604.375mil|Location2.Y=2646.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U2-J3-6(93.711mm,41.033mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4658.312mil|Location2.X=4700.507mil|Location1.Y=2704.375mil|Location2.Y=2746.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4658.312mil|Location2.X=4700.507mil|Location1.Y=2704.375mil|Location2.Y=2746.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U2-J3-7(93.711mm,43.573mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4658.312mil|Location2.X=4700.507mil|Location1.Y=2804.375mil|Location2.Y=2846.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4658.312mil|Location2.X=4700.507mil|Location1.Y=2804.375mil|Location2.Y=2846.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U2-J3-8(93.711mm,46.113mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4658.312mil|Location2.X=4700.507mil|Location1.Y=2904.375mil|Location2.Y=2946.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4658.312mil|Location2.X=4700.507mil|Location1.Y=2904.375mil|Location2.Y=2946.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U2-J3-9(93.711mm,48.653mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3278.312mil|Location2.X=3320.507mil|Location1.Y=3004.375mil|Location2.Y=3046.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3278.312mil|Location2.X=3320.507mil|Location1.Y=3004.375mil|Location2.Y=3046.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U3-J2-10(58.659mm,51.193mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3278.312mil|Location2.X=3320.507mil|Location1.Y=3104.375mil|Location2.Y=3146.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3278.312mil|Location2.X=3320.507mil|Location1.Y=3104.375mil|Location2.Y=3146.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U3-J2-11(58.659mm,53.733mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3278.312mil|Location2.X=3320.507mil|Location1.Y=3204.375mil|Location2.Y=3246.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3278.312mil|Location2.X=3320.507mil|Location1.Y=3204.375mil|Location2.Y=3246.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U3-J2-12(58.659mm,56.273mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3278.312mil|Location2.X=3320.507mil|Location1.Y=3304.375mil|Location2.Y=3346.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3278.312mil|Location2.X=3320.507mil|Location1.Y=3304.375mil|Location2.Y=3346.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U3-J2-13(58.659mm,58.813mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3278.312mil|Location2.X=3320.507mil|Location1.Y=3404.375mil|Location2.Y=3446.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3278.312mil|Location2.X=3320.507mil|Location1.Y=3404.375mil|Location2.Y=3446.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U3-J2-14(58.659mm,61.353mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3278.312mil|Location2.X=3320.507mil|Location1.Y=3504.375mil|Location2.Y=3546.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3278.312mil|Location2.X=3320.507mil|Location1.Y=3504.375mil|Location2.Y=3546.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U3-J2-15(58.659mm,63.893mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3278.312mil|Location2.X=3320.507mil|Location1.Y=3604.375mil|Location2.Y=3646.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3278.312mil|Location2.X=3320.507mil|Location1.Y=3604.375mil|Location2.Y=3646.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U3-J2-16(58.659mm,66.433mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3278.312mil|Location2.X=3320.507mil|Location1.Y=3704.375mil|Location2.Y=3746.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3278.312mil|Location2.X=3320.507mil|Location1.Y=3704.375mil|Location2.Y=3746.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U3-J2-17(58.659mm,68.973mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3278.312mil|Location2.X=3320.507mil|Location1.Y=3804.375mil|Location2.Y=3846.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3278.312mil|Location2.X=3320.507mil|Location1.Y=3804.375mil|Location2.Y=3846.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U3-J2-18(58.659mm,71.513mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3278.312mil|Location2.X=3320.507mil|Location1.Y=3904.375mil|Location2.Y=3946.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3278.312mil|Location2.X=3320.507mil|Location1.Y=3904.375mil|Location2.Y=3946.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U3-J2-19(58.659mm,74.053mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3278.312mil|Location2.X=3320.507mil|Location1.Y=2504.375mil|Location2.Y=2546.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3278.312mil|Location2.X=3320.507mil|Location1.Y=2504.375mil|Location2.Y=2546.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U3-J2-5(58.659mm,38.493mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3278.312mil|Location2.X=3320.507mil|Location1.Y=2604.375mil|Location2.Y=2646.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3278.312mil|Location2.X=3320.507mil|Location1.Y=2604.375mil|Location2.Y=2646.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U3-J2-6(58.659mm,41.033mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3278.312mil|Location2.X=3320.507mil|Location1.Y=2704.375mil|Location2.Y=2746.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3278.312mil|Location2.X=3320.507mil|Location1.Y=2704.375mil|Location2.Y=2746.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U3-J2-7(58.659mm,43.573mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3278.312mil|Location2.X=3320.507mil|Location1.Y=2804.375mil|Location2.Y=2846.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3278.312mil|Location2.X=3320.507mil|Location1.Y=2804.375mil|Location2.Y=2846.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U3-J2-8(58.659mm,46.113mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3278.312mil|Location2.X=3320.507mil|Location1.Y=2904.375mil|Location2.Y=2946.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3278.312mil|Location2.X=3320.507mil|Location1.Y=2904.375mil|Location2.Y=2946.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U3-J2-9(58.659mm,48.653mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2278.312mil|Location2.X=2320.507mil|Location1.Y=3004.375mil|Location2.Y=3046.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2278.312mil|Location2.X=2320.507mil|Location1.Y=3004.375mil|Location2.Y=3046.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U3-J3-10(33.259mm,51.193mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2278.312mil|Location2.X=2320.507mil|Location1.Y=3104.375mil|Location2.Y=3146.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2278.312mil|Location2.X=2320.507mil|Location1.Y=3104.375mil|Location2.Y=3146.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U3-J3-11(33.259mm,53.733mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2278.312mil|Location2.X=2320.507mil|Location1.Y=3204.375mil|Location2.Y=3246.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2278.312mil|Location2.X=2320.507mil|Location1.Y=3204.375mil|Location2.Y=3246.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U3-J3-12(33.259mm,56.273mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2278.312mil|Location2.X=2320.507mil|Location1.Y=3304.375mil|Location2.Y=3346.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2278.312mil|Location2.X=2320.507mil|Location1.Y=3304.375mil|Location2.Y=3346.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U3-J3-13(33.259mm,58.813mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2278.312mil|Location2.X=2320.507mil|Location1.Y=3404.375mil|Location2.Y=3446.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2278.312mil|Location2.X=2320.507mil|Location1.Y=3404.375mil|Location2.Y=3446.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U3-J3-14(33.259mm,61.353mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2278.312mil|Location2.X=2320.507mil|Location1.Y=3504.375mil|Location2.Y=3546.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2278.312mil|Location2.X=2320.507mil|Location1.Y=3504.375mil|Location2.Y=3546.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U3-J3-15(33.259mm,63.893mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2278.312mil|Location2.X=2320.507mil|Location1.Y=3604.375mil|Location2.Y=3646.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2278.312mil|Location2.X=2320.507mil|Location1.Y=3604.375mil|Location2.Y=3646.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U3-J3-16(33.259mm,66.433mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2278.312mil|Location2.X=2320.507mil|Location1.Y=3704.375mil|Location2.Y=3746.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2278.312mil|Location2.X=2320.507mil|Location1.Y=3704.375mil|Location2.Y=3746.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U3-J3-17(33.259mm,68.973mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2278.312mil|Location2.X=2320.507mil|Location1.Y=3804.375mil|Location2.Y=3846.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2278.312mil|Location2.X=2320.507mil|Location1.Y=3804.375mil|Location2.Y=3846.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U3-J3-18(33.259mm,71.513mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2278.312mil|Location2.X=2320.507mil|Location1.Y=3904.375mil|Location2.Y=3946.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2278.312mil|Location2.X=2320.507mil|Location1.Y=3904.375mil|Location2.Y=3946.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U3-J3-19(33.259mm,74.053mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2278.312mil|Location2.X=2320.507mil|Location1.Y=2504.375mil|Location2.Y=2546.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2278.312mil|Location2.X=2320.507mil|Location1.Y=2504.375mil|Location2.Y=2546.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U3-J3-5(33.259mm,38.493mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2278.312mil|Location2.X=2320.507mil|Location1.Y=2604.375mil|Location2.Y=2646.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2278.312mil|Location2.X=2320.507mil|Location1.Y=2604.375mil|Location2.Y=2646.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U3-J3-6(33.259mm,41.033mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2278.312mil|Location2.X=2320.507mil|Location1.Y=2704.375mil|Location2.Y=2746.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2278.312mil|Location2.X=2320.507mil|Location1.Y=2704.375mil|Location2.Y=2746.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U3-J3-7(33.259mm,43.573mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2278.312mil|Location2.X=2320.507mil|Location1.Y=2804.375mil|Location2.Y=2846.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2278.312mil|Location2.X=2320.507mil|Location1.Y=2804.375mil|Location2.Y=2846.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U3-J3-8(33.259mm,46.113mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2278.312mil|Location2.X=2320.507mil|Location1.Y=2904.375mil|Location2.Y=2946.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2278.312mil|Location2.X=2320.507mil|Location1.Y=2904.375mil|Location2.Y=2946.57mil|Absolute=True">Hole Size Constraint: (1.04mm &gt; 1mm) Pad U3-J3-9(33.259mm,48.653mm) on Multi-Layer Actual Hole Size = 1.04mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4048.784mil|Location2.X=4090.034mil|Location1.Y=2099.375mil|Location2.Y=2140.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4048.784mil|Location2.X=4090.034mil|Location1.Y=2099.375mil|Location2.Y=2140.625mil|Absolute=True">Hole Size Constraint: (1.016mm &gt; 1mm) Pad U4-GND_1(78.217mm,28.194mm) on Multi-Layer Actual Hole Size = 1.016mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4048.784mil|Location2.X=4090.034mil|Location1.Y=2499.375mil|Location2.Y=2540.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4048.784mil|Location2.X=4090.034mil|Location1.Y=2499.375mil|Location2.Y=2540.625mil|Absolute=True">Hole Size Constraint: (1.016mm &gt; 1mm) Pad U4-GND_2(78.217mm,38.354mm) on Multi-Layer Actual Hole Size = 1.016mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4148.784mil|Location2.X=4190.034mil|Location1.Y=2099.375mil|Location2.Y=2140.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4148.784mil|Location2.X=4190.034mil|Location1.Y=2099.375mil|Location2.Y=2140.625mil|Absolute=True">Hole Size Constraint: (1.016mm &gt; 1mm) Pad U4-HV(80.757mm,28.194mm) on Multi-Layer Actual Hole Size = 1.016mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4348.784mil|Location2.X=4390.034mil|Location1.Y=2099.375mil|Location2.Y=2140.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4348.784mil|Location2.X=4390.034mil|Location1.Y=2099.375mil|Location2.Y=2140.625mil|Absolute=True">Hole Size Constraint: (1.016mm &gt; 1mm) Pad U4-HV1(85.837mm,28.194mm) on Multi-Layer Actual Hole Size = 1.016mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4248.784mil|Location2.X=4290.034mil|Location1.Y=2099.375mil|Location2.Y=2140.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4248.784mil|Location2.X=4290.034mil|Location1.Y=2099.375mil|Location2.Y=2140.625mil|Absolute=True">Hole Size Constraint: (1.016mm &gt; 1mm) Pad U4-HV2(83.297mm,28.194mm) on Multi-Layer Actual Hole Size = 1.016mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3948.784mil|Location2.X=3990.034mil|Location1.Y=2099.375mil|Location2.Y=2140.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3948.784mil|Location2.X=3990.034mil|Location1.Y=2099.375mil|Location2.Y=2140.625mil|Absolute=True">Hole Size Constraint: (1.016mm &gt; 1mm) Pad U4-HV3(75.677mm,28.194mm) on Multi-Layer Actual Hole Size = 1.016mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3848.784mil|Location2.X=3890.034mil|Location1.Y=2099.375mil|Location2.Y=2140.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3848.784mil|Location2.X=3890.034mil|Location1.Y=2099.375mil|Location2.Y=2140.625mil|Absolute=True">Hole Size Constraint: (1.016mm &gt; 1mm) Pad U4-HV4(73.137mm,28.194mm) on Multi-Layer Actual Hole Size = 1.016mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4148.784mil|Location2.X=4190.034mil|Location1.Y=2499.375mil|Location2.Y=2540.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4148.784mil|Location2.X=4190.034mil|Location1.Y=2499.375mil|Location2.Y=2540.625mil|Absolute=True">Hole Size Constraint: (1.016mm &gt; 1mm) Pad U4-LV(80.757mm,38.354mm) on Multi-Layer Actual Hole Size = 1.016mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4348.784mil|Location2.X=4390.034mil|Location1.Y=2499.375mil|Location2.Y=2540.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4348.784mil|Location2.X=4390.034mil|Location1.Y=2499.375mil|Location2.Y=2540.625mil|Absolute=True">Hole Size Constraint: (1.016mm &gt; 1mm) Pad U4-LV1(85.837mm,38.354mm) on Multi-Layer Actual Hole Size = 1.016mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4248.784mil|Location2.X=4290.034mil|Location1.Y=2499.375mil|Location2.Y=2540.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4248.784mil|Location2.X=4290.034mil|Location1.Y=2499.375mil|Location2.Y=2540.625mil|Absolute=True">Hole Size Constraint: (1.016mm &gt; 1mm) Pad U4-LV2(83.297mm,38.354mm) on Multi-Layer Actual Hole Size = 1.016mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3948.784mil|Location2.X=3990.034mil|Location1.Y=2499.375mil|Location2.Y=2540.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3948.784mil|Location2.X=3990.034mil|Location1.Y=2499.375mil|Location2.Y=2540.625mil|Absolute=True">Hole Size Constraint: (1.016mm &gt; 1mm) Pad U4-LV3(75.677mm,38.354mm) on Multi-Layer Actual Hole Size = 1.016mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3848.784mil|Location2.X=3890.034mil|Location1.Y=2499.375mil|Location2.Y=2540.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3848.784mil|Location2.X=3890.034mil|Location1.Y=2499.375mil|Location2.Y=2540.625mil|Absolute=True">Hole Size Constraint: (1.016mm &gt; 1mm) Pad U4-LV4(73.137mm,38.354mm) on Multi-Layer Actual Hole Size = 1.016mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6294.375mil|Location2.X=6335.625mil|Location1.Y=3899.375mil|Location2.Y=3940.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6294.375mil|Location2.X=6335.625mil|Location1.Y=3899.375mil|Location2.Y=3940.625mil|Absolute=True">Hole Size Constraint: (1.016mm &gt; 1mm) Pad U5-GND_1(135.255mm,73.914mm) on Multi-Layer Actual Hole Size = 1.016mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6294.375mil|Location2.X=6335.625mil|Location1.Y=3499.375mil|Location2.Y=3540.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6294.375mil|Location2.X=6335.625mil|Location1.Y=3499.375mil|Location2.Y=3540.625mil|Absolute=True">Hole Size Constraint: (1.016mm &gt; 1mm) Pad U5-GND_2(135.255mm,63.754mm) on Multi-Layer Actual Hole Size = 1.016mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6194.375mil|Location2.X=6235.625mil|Location1.Y=3899.375mil|Location2.Y=3940.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6194.375mil|Location2.X=6235.625mil|Location1.Y=3899.375mil|Location2.Y=3940.625mil|Absolute=True">Hole Size Constraint: (1.016mm &gt; 1mm) Pad U5-HV(132.715mm,73.914mm) on Multi-Layer Actual Hole Size = 1.016mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5994.375mil|Location2.X=6035.625mil|Location1.Y=3899.375mil|Location2.Y=3940.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5994.375mil|Location2.X=6035.625mil|Location1.Y=3899.375mil|Location2.Y=3940.625mil|Absolute=True">Hole Size Constraint: (1.016mm &gt; 1mm) Pad U5-HV1(127.635mm,73.914mm) on Multi-Layer Actual Hole Size = 1.016mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6094.375mil|Location2.X=6135.625mil|Location1.Y=3899.375mil|Location2.Y=3940.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6094.375mil|Location2.X=6135.625mil|Location1.Y=3899.375mil|Location2.Y=3940.625mil|Absolute=True">Hole Size Constraint: (1.016mm &gt; 1mm) Pad U5-HV2(130.175mm,73.914mm) on Multi-Layer Actual Hole Size = 1.016mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6394.375mil|Location2.X=6435.625mil|Location1.Y=3899.375mil|Location2.Y=3940.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6394.375mil|Location2.X=6435.625mil|Location1.Y=3899.375mil|Location2.Y=3940.625mil|Absolute=True">Hole Size Constraint: (1.016mm &gt; 1mm) Pad U5-HV3(137.795mm,73.914mm) on Multi-Layer Actual Hole Size = 1.016mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6494.375mil|Location2.X=6535.625mil|Location1.Y=3899.375mil|Location2.Y=3940.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6494.375mil|Location2.X=6535.625mil|Location1.Y=3899.375mil|Location2.Y=3940.625mil|Absolute=True">Hole Size Constraint: (1.016mm &gt; 1mm) Pad U5-HV4(140.335mm,73.914mm) on Multi-Layer Actual Hole Size = 1.016mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6194.375mil|Location2.X=6235.625mil|Location1.Y=3499.375mil|Location2.Y=3540.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6194.375mil|Location2.X=6235.625mil|Location1.Y=3499.375mil|Location2.Y=3540.625mil|Absolute=True">Hole Size Constraint: (1.016mm &gt; 1mm) Pad U5-LV(132.715mm,63.754mm) on Multi-Layer Actual Hole Size = 1.016mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5994.375mil|Location2.X=6035.625mil|Location1.Y=3499.375mil|Location2.Y=3540.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5994.375mil|Location2.X=6035.625mil|Location1.Y=3499.375mil|Location2.Y=3540.625mil|Absolute=True">Hole Size Constraint: (1.016mm &gt; 1mm) Pad U5-LV1(127.635mm,63.754mm) on Multi-Layer Actual Hole Size = 1.016mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6094.375mil|Location2.X=6135.625mil|Location1.Y=3499.375mil|Location2.Y=3540.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6094.375mil|Location2.X=6135.625mil|Location1.Y=3499.375mil|Location2.Y=3540.625mil|Absolute=True">Hole Size Constraint: (1.016mm &gt; 1mm) Pad U5-LV2(130.175mm,63.754mm) on Multi-Layer Actual Hole Size = 1.016mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6394.375mil|Location2.X=6435.625mil|Location1.Y=3499.375mil|Location2.Y=3540.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6394.375mil|Location2.X=6435.625mil|Location1.Y=3499.375mil|Location2.Y=3540.625mil|Absolute=True">Hole Size Constraint: (1.016mm &gt; 1mm) Pad U5-LV3(137.795mm,63.754mm) on Multi-Layer Actual Hole Size = 1.016mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6494.375mil|Location2.X=6535.625mil|Location1.Y=3499.375mil|Location2.Y=3540.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6494.375mil|Location2.X=6535.625mil|Location1.Y=3499.375mil|Location2.Y=3540.625mil|Absolute=True">Hole Size Constraint: (1.016mm &gt; 1mm) Pad U5-LV4(140.335mm,63.754mm) on Multi-Layer Actual Hole Size = 1.016mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7018.903mil|Location2.X=7118.578mil|Location1.Y=2776.422mil|Location2.Y=2876.097mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7018.903mil|Location2.X=7118.578mil|Location1.Y=2776.422mil|Location2.Y=2876.097mil|Absolute=True">Hole Size Constraint: (2.5mm &gt; 1mm) Via (154.4mm,46.133mm) from Top Layer to Bottom Layer Actual Hole Size = 2.5mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7018.903mil|Location2.X=7118.578mil|Location1.Y=1163.902mil|Location2.Y=1263.578mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7018.903mil|Location2.X=7118.578mil|Location1.Y=1163.902mil|Location2.Y=1263.578mil|Absolute=True">Hole Size Constraint: (2.5mm &gt; 1mm) Via (154.4mm,5.175mm) from Top Layer to Bottom Layer Actual Hole Size = 2.5mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7018.903mil|Location2.X=7118.578mil|Location1.Y=3108.273mil|Location2.Y=3207.948mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7018.903mil|Location2.X=7118.578mil|Location1.Y=3108.273mil|Location2.Y=3207.948mil|Absolute=True">Hole Size Constraint: (2.5mm &gt; 1mm) Via (154.4mm,54.562mm) from Top Layer to Bottom Layer Actual Hole Size = 2.5mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7018.903mil|Location2.X=7118.578mil|Location1.Y=4720.792mil|Location2.Y=4820.467mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7018.903mil|Location2.X=7118.578mil|Location1.Y=4720.792mil|Location2.Y=4820.467mil|Absolute=True">Hole Size Constraint: (2.5mm &gt; 1mm) Via (154.4mm,95.52mm) from Top Layer to Bottom Layer Actual Hole Size = 2.5mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8631.422mil|Location2.X=8731.097mil|Location1.Y=2776.422mil|Location2.Y=2876.097mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8631.422mil|Location2.X=8731.097mil|Location1.Y=2776.422mil|Location2.Y=2876.097mil|Absolute=True">Hole Size Constraint: (2.5mm &gt; 1mm) Via (195.358mm,46.133mm) from Top Layer to Bottom Layer Actual Hole Size = 2.5mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8631.422mil|Location2.X=8731.097mil|Location1.Y=1163.902mil|Location2.Y=1263.578mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8631.422mil|Location2.X=8731.097mil|Location1.Y=1163.902mil|Location2.Y=1263.578mil|Absolute=True">Hole Size Constraint: (2.5mm &gt; 1mm) Via (195.358mm,5.175mm) from Top Layer to Bottom Layer Actual Hole Size = 2.5mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8631.422mil|Location2.X=8731.097mil|Location1.Y=3108.273mil|Location2.Y=3207.948mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8631.422mil|Location2.X=8731.097mil|Location1.Y=3108.273mil|Location2.Y=3207.948mil|Absolute=True">Hole Size Constraint: (2.5mm &gt; 1mm) Via (195.358mm,54.562mm) from Top Layer to Bottom Layer Actual Hole Size = 2.5mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8631.422mil|Location2.X=8731.097mil|Location1.Y=4720.792mil|Location2.Y=4820.467mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8631.422mil|Location2.X=8731.097mil|Location1.Y=4720.792mil|Location2.Y=4820.467mil|Absolute=True">Hole Size Constraint: (2.5mm &gt; 1mm) Via (195.358mm,95.52mm) from Top Layer to Bottom Layer Actual Hole Size = 2.5mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1766.58mil|Location2.X=1885.94mil|Location1.Y=3548.47mil|Location2.Y=3667.83mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1766.58mil|Location2.X=1885.94mil|Location1.Y=3548.47mil|Location2.Y=3667.83mil|Absolute=True">Hole Size Constraint: (3mm &gt; 1mm) Via (21.241mm,65.993mm) from Top Layer to Bottom Layer Actual Hole Size = 3mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1119.32mil|Location2.X=1238.68mil|Location1.Y=2172.17mil|Location2.Y=2291.53mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1119.32mil|Location2.X=1238.68mil|Location1.Y=2172.17mil|Location2.Y=2291.53mil|Absolute=True">Hole Size Constraint: (3mm &gt; 1mm) Via (4.801mm,31.035mm) from Top Layer to Bottom Layer Actual Hole Size = 3mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1250.162mil|Location2.X=1349.838mil|Location1.Y=1310.162mil|Location2.Y=1409.838mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1250.162mil|Location2.X=1349.838mil|Location1.Y=1310.162mil|Location2.Y=1409.838mil|Absolute=True">Hole Size Constraint: (2.5mm &gt; 1mm) Via (7.874mm,8.89mm) from Top Layer to Bottom Layer Actual Hole Size = 2.5mm</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDVVSOGS3CM3ZYN5HWKGYGAF305GZAUGGD1QWU2DC0X1AKCIDM5RHF"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Net Antennae (Tolerance=0mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1048.13mil|Location2.X=1155.248mil|Location1.Y=1328.13mil|Location2.Y=1502.924mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1048.13mil|Location2.X=1155.248mil|Location1.Y=1328.13mil|Location2.Y=1502.924mil|Absolute=True">Net Antennae: Via (2.667mm,9.271mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8968.13mil|Location2.X=9075.248mil|Location1.Y=4683.13mil|Location2.Y=4857.924mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8968.13mil|Location2.X=9075.248mil|Location1.Y=4683.13mil|Location2.Y=4857.924mil|Absolute=True">Net Antennae: Via (203.835mm,94.488mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8993.13mil|Location2.X=9100.248mil|Location1.Y=4028.13mil|Location2.Y=4202.924mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8993.13mil|Location2.X=9100.248mil|Location1.Y=4028.13mil|Location2.Y=4202.924mil|Absolute=True">Net Antennae: Via (204.47mm,77.851mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9251.835mil|Location2.X=9358.953mil|Location1.Y=4682.102mil|Location2.Y=4856.896mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9251.835mil|Location2.X=9358.953mil|Location1.Y=4682.102mil|Location2.Y=4856.896mil|Absolute=True">Net Antennae: Via (211.041mm,94.462mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3483.13mil|Location2.X=3590.248mil|Location1.Y=3413.13mil|Location2.Y=3587.924mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3483.13mil|Location2.X=3590.248mil|Location1.Y=3413.13mil|Location2.Y=3587.924mil|Absolute=True">Net Antennae: Via (64.516mm,62.23mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Arm%C3%A1rio M%C3%B3vel (Robozinho Mediciner)\Placa Rob%C3%B4 RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1223.602mil|Location2.X=1395.531mil|Location1.Y=1283.602mil|Location2.Y=1567.377mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1223.602mil|Location2.X=1395.531mil|Location1.Y=1283.602mil|Location2.Y=1567.377mil|Absolute=True">Net Antennae: Via (7.874mm,8.89mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

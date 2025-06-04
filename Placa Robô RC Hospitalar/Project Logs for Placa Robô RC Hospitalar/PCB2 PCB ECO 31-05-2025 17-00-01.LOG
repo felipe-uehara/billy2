@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=PB12 Pin=P11-1
+Removed Pin From Net: NetName=PB22 Pin=P11-3
+Removed Pin From Net: NetName=PB21 Pin=P11-4
+Added Pin To Net: NetName=PB22 Pin=P11-1
+Added Pin To Net: NetName=PB21 Pin=P11-3
+Added Pin To Net: NetName=PB22 Pin=P11-4
+Added Rule: Name=Schematic Supply Nets
+Added Rule: Name=Schematic Supply Nets_1
+Added Rule: Name=Schematic Supply Nets_2
+Added Rule: Name=Schematic Supply Nets_3

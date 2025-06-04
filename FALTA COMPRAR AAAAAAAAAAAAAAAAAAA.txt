@@ -1,0 +1,4 @@
+- Placa Fenolite
+- mínimo de 6 Capacitores cerâmicos de 100nF (mínimo 12V)
+- Conector XT macho e fêmea
+- Controle PS4

@@ -1,0 +1,105 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\felip\Documents\Projeto Armário Móvel (Robozinho Mediciner)\Placa Robô RC Hospitalar\PCB2.PcbDoc
+Date     : 31/05/2025
+Time     : 17:19:45
+
+Processing Rule : Clearance Constraint (Gap=0.35mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.5mm) (Max=1.2mm) (Preferred=1mm) (All)
+Rule Violations :0
+
+Processing Rule : Routing Topology Rule(Topology=Shortest) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=0.6mm) (Max=1mm) (All)
+   Violation between Hole Size Constraint: (1.04mm > 1mm) Pad U2-J2-10(32.512mm,40.969mm) on Multi-Layer Actual Hole Size = 1.04mm
+   Violation between Hole Size Constraint: (1.04mm > 1mm) Pad U2-J2-11(32.512mm,38.429mm) on Multi-Layer Actual Hole Size = 1.04mm
+   Violation between Hole Size Constraint: (1.04mm > 1mm) Pad U2-J2-12(32.512mm,35.889mm) on Multi-Layer Actual Hole Size = 1.04mm
+   Violation between Hole Size Constraint: (1.04mm > 1mm) Pad U2-J2-13(32.512mm,33.349mm) on Multi-Layer Actual Hole Size = 1.04mm
+   Violation between Hole Size Constraint: (1.04mm > 1mm) Pad U2-J2-14(32.512mm,30.809mm) on Multi-Layer Actual Hole Size = 1.04mm
+   Violation between Hole Size Constraint: (1.04mm > 1mm) Pad U2-J2-15(32.512mm,28.269mm) on Multi-Layer Actual Hole Size = 1.04mm
+   Violation between Hole Size Constraint: (1.04mm > 1mm) Pad U2-J2-16(32.512mm,25.729mm) on Multi-Layer Actual Hole Size = 1.04mm
+   Violation between Hole Size Constraint: (1.04mm > 1mm) Pad U2-J2-17(32.512mm,23.189mm) on Multi-Layer Actual Hole Size = 1.04mm
+   Violation between Hole Size Constraint: (1.04mm > 1mm) Pad U2-J2-18(32.512mm,20.649mm) on Multi-Layer Actual Hole Size = 1.04mm
+   Violation between Hole Size Constraint: (1.04mm > 1mm) Pad U2-J2-19(32.512mm,18.109mm) on Multi-Layer Actual Hole Size = 1.04mm
+   Violation between Hole Size Constraint: (1.04mm > 1mm) Pad U2-J2-5(32.512mm,53.669mm) on Multi-Layer Actual Hole Size = 1.04mm
+   Violation between Hole Size Constraint: (1.04mm > 1mm) Pad U2-J2-6(32.512mm,51.129mm) on Multi-Layer Actual Hole Size = 1.04mm
+   Violation between Hole Size Constraint: (1.04mm > 1mm) Pad U2-J2-7(32.512mm,48.589mm) on Multi-Layer Actual Hole Size = 1.04mm
+   Violation between Hole Size Constraint: (1.04mm > 1mm) Pad U2-J2-8(32.512mm,46.049mm) on Multi-Layer Actual Hole Size = 1.04mm
+   Violation between Hole Size Constraint: (1.04mm > 1mm) Pad U2-J2-9(32.512mm,43.509mm) on Multi-Layer Actual Hole Size = 1.04mm
+   Violation between Hole Size Constraint: (1.04mm > 1mm) Pad U2-J3-10(57.912mm,40.969mm) on Multi-Layer Actual Hole Size = 1.04mm
+   Violation between Hole Size Constraint: (1.04mm > 1mm) Pad U2-J3-11(57.912mm,38.429mm) on Multi-Layer Actual Hole Size = 1.04mm
+   Violation between Hole Size Constraint: (1.04mm > 1mm) Pad U2-J3-12(57.912mm,35.889mm) on Multi-Layer Actual Hole Size = 1.04mm
+   Violation between Hole Size Constraint: (1.04mm > 1mm) Pad U2-J3-13(57.912mm,33.349mm) on Multi-Layer Actual Hole Size = 1.04mm
+   Violation between Hole Size Constraint: (1.04mm > 1mm) Pad U2-J3-14(57.912mm,30.809mm) on Multi-Layer Actual Hole Size = 1.04mm
+   Violation between Hole Size Constraint: (1.04mm > 1mm) Pad U2-J3-15(57.912mm,28.269mm) on Multi-Layer Actual Hole Size = 1.04mm
+   Violation between Hole Size Constraint: (1.04mm > 1mm) Pad U2-J3-16(57.912mm,25.729mm) on Multi-Layer Actual Hole Size = 1.04mm
+   Violation between Hole Size Constraint: (1.04mm > 1mm) Pad U2-J3-17(57.912mm,23.189mm) on Multi-Layer Actual Hole Size = 1.04mm
+   Violation between Hole Size Constraint: (1.04mm > 1mm) Pad U2-J3-18(57.912mm,20.649mm) on Multi-Layer Actual Hole Size = 1.04mm
+   Violation between Hole Size Constraint: (1.04mm > 1mm) Pad U2-J3-19(57.912mm,18.109mm) on Multi-Layer Actual Hole Size = 1.04mm
+   Violation between Hole Size Constraint: (1.04mm > 1mm) Pad U2-J3-5(57.912mm,53.669mm) on Multi-Layer Actual Hole Size = 1.04mm
+   Violation between Hole Size Constraint: (1.04mm > 1mm) Pad U2-J3-6(57.912mm,51.129mm) on Multi-Layer Actual Hole Size = 1.04mm
+   Violation between Hole Size Constraint: (1.04mm > 1mm) Pad U2-J3-7(57.912mm,48.589mm) on Multi-Layer Actual Hole Size = 1.04mm
+   Violation between Hole Size Constraint: (1.04mm > 1mm) Pad U2-J3-8(57.912mm,46.049mm) on Multi-Layer Actual Hole Size = 1.04mm
+   Violation between Hole Size Constraint: (1.04mm > 1mm) Pad U2-J3-9(57.912mm,43.509mm) on Multi-Layer Actual Hole Size = 1.04mm
+   Violation between Hole Size Constraint: (1.016mm > 1mm) Pad U4-GND_1(81.153mm,38.989mm) on Multi-Layer Actual Hole Size = 1.016mm
+   Violation between Hole Size Constraint: (1.016mm > 1mm) Pad U4-GND_2(70.993mm,38.989mm) on Multi-Layer Actual Hole Size = 1.016mm
+   Violation between Hole Size Constraint: (1.016mm > 1mm) Pad U4-HV(81.153mm,41.529mm) on Multi-Layer Actual Hole Size = 1.016mm
+   Violation between Hole Size Constraint: (1.016mm > 1mm) Pad U4-HV1(81.153mm,46.609mm) on Multi-Layer Actual Hole Size = 1.016mm
+   Violation between Hole Size Constraint: (1.016mm > 1mm) Pad U4-HV2(81.153mm,44.069mm) on Multi-Layer Actual Hole Size = 1.016mm
+   Violation between Hole Size Constraint: (1.016mm > 1mm) Pad U4-HV3(81.153mm,36.449mm) on Multi-Layer Actual Hole Size = 1.016mm
+   Violation between Hole Size Constraint: (1.016mm > 1mm) Pad U4-HV4(81.153mm,33.909mm) on Multi-Layer Actual Hole Size = 1.016mm
+   Violation between Hole Size Constraint: (1.016mm > 1mm) Pad U4-LV(70.993mm,41.529mm) on Multi-Layer Actual Hole Size = 1.016mm
+   Violation between Hole Size Constraint: (1.016mm > 1mm) Pad U4-LV1(70.993mm,46.609mm) on Multi-Layer Actual Hole Size = 1.016mm
+   Violation between Hole Size Constraint: (1.016mm > 1mm) Pad U4-LV2(70.993mm,44.069mm) on Multi-Layer Actual Hole Size = 1.016mm
+   Violation between Hole Size Constraint: (1.016mm > 1mm) Pad U4-LV3(70.993mm,36.449mm) on Multi-Layer Actual Hole Size = 1.016mm
+   Violation between Hole Size Constraint: (1.016mm > 1mm) Pad U4-LV4(70.993mm,33.909mm) on Multi-Layer Actual Hole Size = 1.016mm
+   Violation between Hole Size Constraint: (1.016mm > 1mm) Pad U5-GND_1(8.128mm,42.418mm) on Multi-Layer Actual Hole Size = 1.016mm
+   Violation between Hole Size Constraint: (1.016mm > 1mm) Pad U5-GND_2(18.288mm,42.418mm) on Multi-Layer Actual Hole Size = 1.016mm
+   Violation between Hole Size Constraint: (1.016mm > 1mm) Pad U5-HV(8.128mm,39.878mm) on Multi-Layer Actual Hole Size = 1.016mm
+   Violation between Hole Size Constraint: (1.016mm > 1mm) Pad U5-HV1(8.128mm,34.798mm) on Multi-Layer Actual Hole Size = 1.016mm
+   Violation between Hole Size Constraint: (1.016mm > 1mm) Pad U5-HV2(8.128mm,37.338mm) on Multi-Layer Actual Hole Size = 1.016mm
+   Violation between Hole Size Constraint: (1.016mm > 1mm) Pad U5-HV3(8.128mm,44.958mm) on Multi-Layer Actual Hole Size = 1.016mm
+   Violation between Hole Size Constraint: (1.016mm > 1mm) Pad U5-HV4(8.128mm,47.498mm) on Multi-Layer Actual Hole Size = 1.016mm
+   Violation between Hole Size Constraint: (1.016mm > 1mm) Pad U5-LV(18.288mm,39.878mm) on Multi-Layer Actual Hole Size = 1.016mm
+   Violation between Hole Size Constraint: (1.016mm > 1mm) Pad U5-LV1(18.288mm,34.798mm) on Multi-Layer Actual Hole Size = 1.016mm
+   Violation between Hole Size Constraint: (1.016mm > 1mm) Pad U5-LV2(18.288mm,37.338mm) on Multi-Layer Actual Hole Size = 1.016mm
+   Violation between Hole Size Constraint: (1.016mm > 1mm) Pad U5-LV3(18.288mm,44.958mm) on Multi-Layer Actual Hole Size = 1.016mm
+   Violation between Hole Size Constraint: (1.016mm > 1mm) Pad U5-LV4(18.288mm,47.498mm) on Multi-Layer Actual Hole Size = 1.016mm
+Rule Violations :54
+
+Processing Rule : Hole To Hole Clearance (Gap=0.1mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0.05mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=0mm) (IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=0mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mm) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
+Rule Violations :0
+
+
+Violations Detected : 54
+Waived Violations : 0
+Time Elapsed        : 00:00:00

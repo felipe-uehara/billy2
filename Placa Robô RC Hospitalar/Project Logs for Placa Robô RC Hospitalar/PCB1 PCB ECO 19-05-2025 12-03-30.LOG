@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=Right_Forward Pin=U4-LV1
+Removed Pin From Net: NetName=Right_Backward Pin=U4-LV2
+Removed Pin From Net: NetName=Left_Forward Pin=U4-LV3
+Removed Pin From Net: NetName=Left_Backward Pin=U4-LV4
+Added Pin To Net: NetName=Right_Backward Pin=U4-LV1
+Added Pin To Net: NetName=Right_Forward Pin=U4-LV2
+Added Pin To Net: NetName=Left_Backward Pin=U4-LV3
+Added Pin To Net: NetName=Left_Forward Pin=U4-LV4

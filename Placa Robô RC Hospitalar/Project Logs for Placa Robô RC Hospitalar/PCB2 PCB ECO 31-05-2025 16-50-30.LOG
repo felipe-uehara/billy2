@@ -1,0 +1,448 @@
+Added Component: Designator=P4(KRE1X2)
+Add component (AddParameter): Name = "Accessory Type"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Brand"; Value = "Cromax"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Category"; Value = "Headers & Wire Housings"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "http://loja.multcomercial.com.br/barra-de-pinos-simples-1x40-macho-bmo40-1e.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://loja.multcomercial.com.br/barra-de-pinos-simples-1x40-macho-bmo40-1e.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Gender"; Value = "Pin (Male)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Plating"; Value = "Gold"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Type"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Cromax"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "IMP10327"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Minimum Order Quantity"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Angle"; Value = "Vertical"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Style"; Value = "Straight Pin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Positions"; Value = "40 Position"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Rows"; Value = "1 Row"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pitch"; Value = "2 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=1.00, 5=0.20 (BRL)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Product"; Value = "Headers"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Product Category"; Value = "Accessories"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Reeling"; Value = "False"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "RoHS Compliant"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS - Mouser"; Value = "Y"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Row Spacing"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "14"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Mult Comercial"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "Barra de Pinos Simples 1x40 Macho BMO40-1E"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination Style"; Value = "Through Hole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Breakaway"; VariantName = "[No Variations]"
+Added Component: Designator=P5(KRE1X2)
+Add component (AddParameter): Name = "Accessory Type"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Brand"; Value = "Cromax"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Category"; Value = "Headers & Wire Housings"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "http://loja.multcomercial.com.br/barra-de-pinos-simples-1x40-macho-bmo40-1e.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://loja.multcomercial.com.br/barra-de-pinos-simples-1x40-macho-bmo40-1e.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Gender"; Value = "Pin (Male)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Plating"; Value = "Gold"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Type"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Cromax"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "IMP10327"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Minimum Order Quantity"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Angle"; Value = "Vertical"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Style"; Value = "Straight Pin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Positions"; Value = "40 Position"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Rows"; Value = "1 Row"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pitch"; Value = "2 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=1.00, 5=0.20 (BRL)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Product"; Value = "Headers"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Product Category"; Value = "Accessories"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Reeling"; Value = "False"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "RoHS Compliant"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS - Mouser"; Value = "Y"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Row Spacing"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "14"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Mult Comercial"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "Barra de Pinos Simples 1x40 Macho BMO40-1E"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination Style"; Value = "Through Hole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Breakaway"; VariantName = "[No Variations]"
+Added Component: Designator=P6(KRE1X2)
+Add component (AddParameter): Name = "Accessory Type"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Brand"; Value = "Cromax"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Category"; Value = "Headers & Wire Housings"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "http://loja.multcomercial.com.br/barra-de-pinos-simples-1x40-macho-bmo40-1e.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://loja.multcomercial.com.br/barra-de-pinos-simples-1x40-macho-bmo40-1e.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Gender"; Value = "Pin (Male)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Plating"; Value = "Gold"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Type"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Cromax"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "IMP10327"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Minimum Order Quantity"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Angle"; Value = "Vertical"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Style"; Value = "Straight Pin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Positions"; Value = "40 Position"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Rows"; Value = "1 Row"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pitch"; Value = "2 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=1.00, 5=0.20 (BRL)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Product"; Value = "Headers"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Product Category"; Value = "Accessories"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Reeling"; Value = "False"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "RoHS Compliant"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS - Mouser"; Value = "Y"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Row Spacing"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "14"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Mult Comercial"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "Barra de Pinos Simples 1x40 Macho BMO40-1E"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination Style"; Value = "Through Hole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Breakaway"; VariantName = "[No Variations]"
+Added Component: Designator=P7(KRE1X2)
+Add component (AddParameter): Name = "Accessory Type"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Brand"; Value = "Cromax"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Category"; Value = "Headers & Wire Housings"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "http://loja.multcomercial.com.br/barra-de-pinos-simples-1x40-macho-bmo40-1e.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://loja.multcomercial.com.br/barra-de-pinos-simples-1x40-macho-bmo40-1e.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Gender"; Value = "Pin (Male)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Plating"; Value = "Gold"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Type"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Cromax"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "IMP10327"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Minimum Order Quantity"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Angle"; Value = "Vertical"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Style"; Value = "Straight Pin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Positions"; Value = "40 Position"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Rows"; Value = "1 Row"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pitch"; Value = "2 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=1.00, 5=0.20 (BRL)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Product"; Value = "Headers"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Product Category"; Value = "Accessories"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Reeling"; Value = "False"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "RoHS Compliant"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS - Mouser"; Value = "Y"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Row Spacing"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "14"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Mult Comercial"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "Barra de Pinos Simples 1x40 Macho BMO40-1E"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination Style"; Value = "Through Hole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Breakaway"; VariantName = "[No Variations]"
+Added Component: Designator=P8(KRE1X2)
+Add component (AddParameter): Name = "Accessory Type"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Brand"; Value = "Cromax"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Category"; Value = "Headers & Wire Housings"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "http://loja.multcomercial.com.br/barra-de-pinos-simples-1x40-macho-bmo40-1e.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://loja.multcomercial.com.br/barra-de-pinos-simples-1x40-macho-bmo40-1e.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Gender"; Value = "Pin (Male)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Plating"; Value = "Gold"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Type"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Cromax"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "IMP10327"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Minimum Order Quantity"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Angle"; Value = "Vertical"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Style"; Value = "Straight Pin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Positions"; Value = "40 Position"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Rows"; Value = "1 Row"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pitch"; Value = "2 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=1.00, 5=0.20 (BRL)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Product"; Value = "Headers"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Product Category"; Value = "Accessories"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Reeling"; Value = "False"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "RoHS Compliant"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS - Mouser"; Value = "Y"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Row Spacing"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "14"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Mult Comercial"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "Barra de Pinos Simples 1x40 Macho BMO40-1E"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination Style"; Value = "Through Hole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Breakaway"; VariantName = "[No Variations]"
+Added Component: Designator=P9(KRE1X2)
+Add component (AddParameter): Name = "Accessory Type"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Brand"; Value = "Cromax"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Category"; Value = "Headers & Wire Housings"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "http://loja.multcomercial.com.br/barra-de-pinos-simples-1x40-macho-bmo40-1e.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://loja.multcomercial.com.br/barra-de-pinos-simples-1x40-macho-bmo40-1e.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Gender"; Value = "Pin (Male)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Plating"; Value = "Gold"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Type"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Cromax"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "IMP10327"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Minimum Order Quantity"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Angle"; Value = "Vertical"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Style"; Value = "Straight Pin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Positions"; Value = "40 Position"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Rows"; Value = "1 Row"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pitch"; Value = "2 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=1.00, 5=0.20 (BRL)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Product"; Value = "Headers"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Product Category"; Value = "Accessories"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Reeling"; Value = "False"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "RoHS Compliant"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS - Mouser"; Value = "Y"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Row Spacing"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "14"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Mult Comercial"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "Barra de Pinos Simples 1x40 Macho BMO40-1E"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination Style"; Value = "Through Hole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Breakaway"; VariantName = "[No Variations]"
+Added Component: Designator=P11(HDR1X4)
+Add component (AddParameter): Name = "Accessory Type"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Brand"; Value = "Cromax"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Category"; Value = "Headers & Wire Housings"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "http://loja.multcomercial.com.br/barra-de-pinos-simples-1x40-macho-bmo40-1e.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://loja.multcomercial.com.br/barra-de-pinos-simples-1x40-macho-bmo40-1e.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Gender"; Value = "Pin (Male)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Plating"; Value = "Gold"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Type"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Cromax"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "IMP10327"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Minimum Order Quantity"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Angle"; Value = "Vertical"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Style"; Value = "Straight Pin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Positions"; Value = "40 Position"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Rows"; Value = "1 Row"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pitch"; Value = "2 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=1.00, 5=0.20 (BRL)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Product"; Value = "Headers"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Product Category"; Value = "Accessories"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Reeling"; Value = "False"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "RoHS Compliant"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS - Mouser"; Value = "Y"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Row Spacing"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "14"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Mult Comercial"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "Barra de Pinos Simples 1x40 Macho BMO40-1E"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination Style"; Value = "Through Hole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Breakaway"; VariantName = "[No Variations]"
+Added Component: Designator=P12(HDR1X4)
+Add component (AddParameter): Name = "Accessory Type"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Brand"; Value = "Cromax"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Category"; Value = "Headers & Wire Housings"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "http://loja.multcomercial.com.br/barra-de-pinos-simples-1x40-macho-bmo40-1e.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://loja.multcomercial.com.br/barra-de-pinos-simples-1x40-macho-bmo40-1e.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Gender"; Value = "Pin (Male)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Plating"; Value = "Gold"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Type"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Cromax"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "IMP10327"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Minimum Order Quantity"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Angle"; Value = "Vertical"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Style"; Value = "Straight Pin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Positions"; Value = "40 Position"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Rows"; Value = "1 Row"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pitch"; Value = "2 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=1.00, 5=0.20 (BRL)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Product"; Value = "Headers"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Product Category"; Value = "Accessories"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Reeling"; Value = "False"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "RoHS Compliant"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS - Mouser"; Value = "Y"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Row Spacing"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "14"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Mult Comercial"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "Barra de Pinos Simples 1x40 Macho BMO40-1E"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination Style"; Value = "Through Hole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Breakaway"; VariantName = "[No Variations]"
+Added Component: Designator=R1(RES 10K 1/4W CARBON FILM)
+Add component (AddParameter): Name = "Category"; Value = "Resistors"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "http://loja.multcomercial.com.br/resistor-de-1-4-de-watt-cr25-5-de-tolerancia.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://loja.multcomercial.com.br/resistor-de-1-4-de-watt-cr25-5-de-tolerancia.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Composition"; Value = "Carbon Film"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Features"; Value = "Flame Retardant Coating, Safety"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Ty-Ohm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "CR25"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Terminations"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-55°C ~ 155°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package / Case"; Value = "Axial"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Cut Tape (CT)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power (Watts)"; Value = "0.25W, 1/4W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=0.20 (BRL)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Resistance (Ohms)"; Value = "?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "RoHS Compliant"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Size / Dimension"; Value = "0.091" Dia x 0.256" L (2.30mm x 6.50mm)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "617543"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Mult Comercial"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Device Package"; Value = "Axial"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "Resistor de Filme de Carbono 1/4 de Watt CR25 5% de tolerância - 0.22R O à 10M O"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Coefficient"; Value = "0/ -500ppm/°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "±5%"; VariantName = "[No Variations]"
+Added Component: Designator=R2(RES 10K 1/4W CARBON FILM)
+Add component (AddParameter): Name = "Category"; Value = "Resistors"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "http://loja.multcomercial.com.br/resistor-de-1-4-de-watt-cr25-5-de-tolerancia.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://loja.multcomercial.com.br/resistor-de-1-4-de-watt-cr25-5-de-tolerancia.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Composition"; Value = "Carbon Film"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Features"; Value = "Flame Retardant Coating, Safety"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Ty-Ohm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "CR25"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Terminations"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-55°C ~ 155°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package / Case"; Value = "Axial"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Cut Tape (CT)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power (Watts)"; Value = "0.25W, 1/4W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=0.20 (BRL)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Resistance (Ohms)"; Value = "?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "RoHS Compliant"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Size / Dimension"; Value = "0.091" Dia x 0.256" L (2.30mm x 6.50mm)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "617543"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Mult Comercial"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Device Package"; Value = "Axial"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "Resistor de Filme de Carbono 1/4 de Watt CR25 5% de tolerância - 0.22R O à 10M O"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Coefficient"; Value = "0/ -500ppm/°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "±5%"; VariantName = "[No Variations]"
+Added Component: Designator=R3(RES 10K 1/4W CARBON FILM)
+Add component (AddParameter): Name = "Category"; Value = "Resistors"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "http://loja.multcomercial.com.br/resistor-de-1-4-de-watt-cr25-5-de-tolerancia.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://loja.multcomercial.com.br/resistor-de-1-4-de-watt-cr25-5-de-tolerancia.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Composition"; Value = "Carbon Film"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Features"; Value = "Flame Retardant Coating, Safety"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Ty-Ohm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "CR25"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Terminations"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-55°C ~ 155°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package / Case"; Value = "Axial"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Cut Tape (CT)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power (Watts)"; Value = "0.25W, 1/4W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=0.20 (BRL)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Resistance (Ohms)"; Value = "?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "RoHS Compliant"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Size / Dimension"; Value = "0.091" Dia x 0.256" L (2.30mm x 6.50mm)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "617543"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Mult Comercial"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Device Package"; Value = "Axial"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "Resistor de Filme de Carbono 1/4 de Watt CR25 5% de tolerância - 0.22R O à 10M O"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Coefficient"; Value = "0/ -500ppm/°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "±5%"; VariantName = "[No Variations]"
+Added Component: Designator=R4(RES 10K 1/4W CARBON FILM)
+Add component (AddParameter): Name = "Category"; Value = "Resistors"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "http://loja.multcomercial.com.br/resistor-de-1-4-de-watt-cr25-5-de-tolerancia.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://loja.multcomercial.com.br/resistor-de-1-4-de-watt-cr25-5-de-tolerancia.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Composition"; Value = "Carbon Film"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Features"; Value = "Flame Retardant Coating, Safety"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Ty-Ohm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "CR25"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Terminations"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-55°C ~ 155°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package / Case"; Value = "Axial"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Cut Tape (CT)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power (Watts)"; Value = "0.25W, 1/4W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=0.20 (BRL)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Resistance (Ohms)"; Value = "?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "RoHS Compliant"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Size / Dimension"; Value = "0.091" Dia x 0.256" L (2.30mm x 6.50mm)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "617543"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Mult Comercial"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Device Package"; Value = "Axial"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "Resistor de Filme de Carbono 1/4 de Watt CR25 5% de tolerância - 0.22R O à 10M O"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Coefficient"; Value = "0/ -500ppm/°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "±5%"; VariantName = "[No Variations]"
+Added Component: Designator=U2(MODULE_ESP32-DEVKITC-32D - duplicate)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/ESP32-DEVKITC-32D/Espressif+Systems/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Espressif Systems"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "ESP32-DEVKITC-32D"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/ESP32-DEVKITC-32D/Espressif+Systems/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=U4(CONV_BOB-12009)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/BOB-12009/SparkFun/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "SparkFun"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "BOB-12009"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/BOB-12009/SparkFun/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=U5(CONV_BOB-12009)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/BOB-12009/SparkFun/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "SparkFun"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "BOB-12009"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/BOB-12009/SparkFun/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+3.3V Pin=P12-1
+Added Pin To Net: NetName=+3.3V Pin=P12-2
+Added Pin To Net: NetName=+3.3V Pin=P12-3
+Added Pin To Net: NetName=+3.3V Pin=P12-4
+Added Pin To Net: NetName=+3.3V Pin=U2-J3-19
+Added Pin To Net: NetName=+3.3V Pin=U4-LV
+Added Pin To Net: NetName=+3.3V Pin=U5-LV
+Added Net: Name=+3.3V
+Added Pin To Net: NetName=+5V Pin=U2-J2-19
+Added Pin To Net: NetName=+5V Pin=U4-HV
+Added Pin To Net: NetName=+5V Pin=U5-HV
+Added Net: Name=+5V
+Added Pin To Net: NetName=D1_Backward Pin=U2-J2-15
+Added Pin To Net: NetName=D1_Backward Pin=U5-LV2
+Added Net: Name=D1_Backward
+Added Pin To Net: NetName=D1_B Pin=P6-2
+Added Pin To Net: NetName=D1_B Pin=U5-HV1
+Added Net: Name=D1_B
+Added Pin To Net: NetName=D1_Forward Pin=U2-J2-17
+Added Pin To Net: NetName=D1_Forward Pin=U5-LV1
+Added Net: Name=D1_Forward
+Added Pin To Net: NetName=D1_F Pin=P6-1
+Added Pin To Net: NetName=D1_F Pin=U5-HV2
+Added Net: Name=D1_F
+Added Pin To Net: NetName=D2_Backward Pin=U2-J2-10
+Added Pin To Net: NetName=D2_Backward Pin=U5-LV4
+Added Net: Name=D2_Backward
+Added Pin To Net: NetName=D2_B Pin=P7-2
+Added Pin To Net: NetName=D2_B Pin=U5-HV4
+Added Net: Name=D2_B
+Added Pin To Net: NetName=D2_Forward Pin=U2-J2-13
+Added Pin To Net: NetName=D2_Forward Pin=U5-LV3
+Added Net: Name=D2_Forward
+Added Pin To Net: NetName=D2_F Pin=P7-1
+Added Pin To Net: NetName=D2_F Pin=U5-HV3
+Added Net: Name=D2_F
+Added Pin To Net: NetName=GND Pin=P8-2
+Added Pin To Net: NetName=GND Pin=P9-2
+Added Pin To Net: NetName=GND Pin=R1-1
+Added Pin To Net: NetName=GND Pin=R2-1
+Added Pin To Net: NetName=GND Pin=R3-1
+Added Pin To Net: NetName=GND Pin=R4-1
+Added Pin To Net: NetName=GND Pin=U2-J2-18
+Added Pin To Net: NetName=GND Pin=U2-J3-18
+Added Pin To Net: NetName=GND Pin=U4-GND_1
+Added Pin To Net: NetName=GND Pin=U4-GND_2
+Added Pin To Net: NetName=GND Pin=U5-GND_1
+Added Pin To Net: NetName=GND Pin=U5-GND_2
+Added Net: Name=GND
+Added Pin To Net: NetName=LB Pin=P4-2
+Added Pin To Net: NetName=LB Pin=U4-HV4
+Added Net: Name=LB
+Added Pin To Net: NetName=Left_Backward Pin=U2-J3-11
+Added Pin To Net: NetName=Left_Backward Pin=U4-LV3
+Added Net: Name=Left_Backward
+Added Pin To Net: NetName=Left_Forward Pin=U2-J3-15
+Added Pin To Net: NetName=Left_Forward Pin=U4-LV4
+Added Net: Name=Left_Forward
+Added Pin To Net: NetName=LF Pin=P4-1
+Added Pin To Net: NetName=LF Pin=U4-HV3
+Added Net: Name=LF
+Added Pin To Net: NetName=PB11 Pin=P11-2
+Added Pin To Net: NetName=PB11 Pin=R1-2
+Added Pin To Net: NetName=PB11 Pin=U2-J2-12
+Added Net: Name=PB11
+Added Pin To Net: NetName=PB12 Pin=P11-1
+Added Pin To Net: NetName=PB12 Pin=R2-2
+Added Pin To Net: NetName=PB12 Pin=U2-J2-14
+Added Net: Name=PB12
+Added Pin To Net: NetName=PB21 Pin=P11-4
+Added Pin To Net: NetName=PB21 Pin=R3-2
+Added Pin To Net: NetName=PB21 Pin=U2-J3-10
+Added Net: Name=PB21
+Added Pin To Net: NetName=PB22 Pin=P11-3
+Added Pin To Net: NetName=PB22 Pin=R4-2
+Added Pin To Net: NetName=PB22 Pin=U2-J3-5
+Added Net: Name=PB22
+Added Pin To Net: NetName=RB Pin=P5-2
+Added Pin To Net: NetName=RB Pin=U4-HV2
+Added Net: Name=RB
+Added Pin To Net: NetName=RF Pin=P5-1
+Added Pin To Net: NetName=RF Pin=U4-HV1
+Added Net: Name=RF
+Added Pin To Net: NetName=RGB Pin=U2-J3-12
+Added Net: Name=RGB
+Added Pin To Net: NetName=Right_Backward Pin=U2-J3-6
+Added Pin To Net: NetName=Right_Backward Pin=U4-LV1
+Added Net: Name=Right_Backward
+Added Pin To Net: NetName=Right_Forward Pin=U2-J3-9
+Added Pin To Net: NetName=Right_Forward Pin=U4-LV2
+Added Net: Name=Right_Forward
+Added Pin To Net: NetName=VCC Pin=P8-1
+Added Pin To Net: NetName=VCC Pin=P9-1
+Added Net: Name=VCC
+Added Class: Name=Esquemático
+Added Rule: Name=Schematic Supply Nets
+Added Rule: Name=Schematic Supply Nets_1
+Added Rule: Name=Schematic Supply Nets_2
+Added Rule: Name=Schematic Supply Nets_3

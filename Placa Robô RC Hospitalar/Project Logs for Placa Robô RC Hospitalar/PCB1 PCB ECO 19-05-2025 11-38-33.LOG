@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=+6V Pin=P1-1
+Removed Pin From Net: NetName=VCC Pin=P3-1
+Added Pin To Net: NetName=VCC Pin=P1-1
+Added Pin To Net: NetName=+6V Pin=P3-1
+Added Rule: Name=Schematic Supply Nets
+Added Rule: Name=Schematic Supply Nets_1
+Added Rule: Name=Schematic Supply Nets_2
+Added Rule: Name=Schematic Supply Nets_3
+Added Rule: Name=Schematic Supply Nets_4
+Added Rule: Name=Schematic Supply Nets_5

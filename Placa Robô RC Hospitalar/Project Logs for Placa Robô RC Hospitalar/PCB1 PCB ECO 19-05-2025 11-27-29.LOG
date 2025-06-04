@@ -1,0 +1,36 @@
+Added Component: Designator=U?(MODULE_ESP32-DEVKITC-32D - duplicate)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/ESP32-DEVKITC-32D/Espressif+Systems/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Espressif Systems"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "ESP32-DEVKITC-32D"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/ESP32-DEVKITC-32D/Espressif+Systems/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=U?(MODULE_ESP32-DEVKITC-32D - duplicate)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/ESP32-DEVKITC-32D/Espressif+Systems/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Espressif Systems"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "ESP32-DEVKITC-32D"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/ESP32-DEVKITC-32D/Espressif+Systems/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=D2_Backward Pin=U?-J2-10
+Added Pin To Net: NetName=PB11 Pin=U?-J2-12
+Added Pin To Net: NetName=D2_Forward Pin=U?-J2-13
+Added Pin To Net: NetName=PB12 Pin=U?-J2-14
+Added Pin To Net: NetName=D1_Backward Pin=U?-J2-15
+Added Pin To Net: NetName=D1_Forward Pin=U?-J2-17
+Added Pin To Net: NetName=GND Pin=U?-J2-18
+Added Pin To Net: NetName=GND Pin=U?-J2-18
+Added Pin To Net: NetName=5V Pin=U?-J2-19
+Added Pin To Net: NetName=+5V Pin=U?-J2-19
+Added Pin To Net: NetName=PB22 Pin=U?-J3-5
+Added Pin To Net: NetName=Right_Backward Pin=U?-J3-6
+Added Pin To Net: NetName=Right_Forward Pin=U?-J3-9
+Added Pin To Net: NetName=PB21 Pin=U?-J3-10
+Added Pin To Net: NetName=Left_Backward Pin=U?-J3-11
+Added Pin To Net: NetName=RGB Pin=U?-J3-12
+Added Pin To Net: NetName=Left_Forward Pin=U?-J3-15
+Added Pin To Net: NetName=GND Pin=U?-J3-18
+Added Pin To Net: NetName=GND Pin=U?-J3-18
+Added Pin To Net: NetName=3.3V Pin=U?-J3-19
+Added Member To Class: ClassName=Esquemático Member=Component U? ESP32-DEVKITC-32D
+Added Member To Class: ClassName=Esquemático Member=Component U? ESP32-DEVKITC-32D

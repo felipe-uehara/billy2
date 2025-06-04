@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=+3.3V Pin=P12-1
+Removed Pin From Net: NetName=+3.3V Pin=P12-2
+Removed Pin From Net: NetName=+3.3V Pin=P12-3
+Removed Pin From Net: NetName=+3.3V Pin=P12-4
+Removed Member From Class: ClassName=Esquemático Member=P12
